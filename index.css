@@ -942,7 +942,7 @@
     }
 
     /* Extra-large devices */
-    @media (min-width:769px) and (max-width: 2550px){
+    @media (min-width:769px) and (max-width: 2560px){
         .header{
             
             background: linear-gradient(60deg,#4839B7,#6ED0B5);;
