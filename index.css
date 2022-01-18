@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 }
 
 
@@ -11,18 +12,29 @@
     background: linear-gradient(to right,#AF43FF,#FA6E3B);
    
 }
+
 .login-btn{
     background: linear-gradient(to right,#B79039,#FF8545);
     
 }
 
 
+.anchor{
+    text-decoration: none;
+    font-family: "Poppins";
+    color: #504450;
 
+}
 
+.top-link{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 20px;
+}
 
 
 /* Mobile First Approach*/
-@media (min-width:320px) and (max-width: 426px){
+@media (min-width:320px) and (max-width: 600px){
     .header{
         height: 600px;
         background-color: blue;
@@ -428,32 +440,34 @@
         font-family: "Poppins";
         font-size: 8px;
         margin-bottom: 50px;
+        background-color: #ffffff;
     }
     .cpRghtText::before{
         content: "";
         height: 2px;
-        width: 12%;
+        width: 50px;
         background-color: #707070;
         position: absolute;
-        left: 10%; 
+        left: 0%; 
         bottom: 0px;
-        
+        top: 5px;  
     }
     .cpRghtText::after{
         content: "";
         height: 2px;
-        width: 12%;
+        width: 50px;
         background-color: #707070;
         position: absolute;
         bottom: 0px;
-        right: 10%;
+        right: 0%;
+        top: 5px;
     }
 }
 
 
 
 /* medium devices */
-@media (min-width:426px) and (max-width: 768px){
+@media (min-width:601px) and (max-width: 850px){
     .header{
         background: linear-gradient(60deg,#4839B7,#6ED0B5);;
     }
@@ -488,7 +502,7 @@
         margin-top: 18px;
         margin-left: 85px;
         position: relative;
-        background-image: url("./media/dottedGrid.png");
+        background-image: url("/xdImages/dottedGrid.png");
         background-repeat: no-repeat;
         background-position: 39px 0px;
         background-size: 160px 180px;
@@ -846,34 +860,36 @@
     .cpRghtText{
         text-align: center;
         position: relative;
-        font-family: "Poppins";
+        font-family: "PoppinReg";
         font-size: 12px;
         margin-bottom: 50px;
+        background-color: #ffffff;
     }
     .cpRghtText::before{
         content: "";
         height: 2px;
-        width: 18%;
+        width: 100px;
         background-color: #707070;
         position: absolute;
-        left: 10%; 
-        bottom: 0px;
-        
+        left: 0%; 
+        bottom: 0px;  
+        top: 10px;
     }
     .cpRghtText::after{
         content: "";
         height: 2px;
-        width: 18%;
+        width: 100px;
         background-color: #707070;
         position: absolute;
         bottom: 0px;
-        right: 10%;
+        right: 0%;
+        top: 10px;
     }
     }
 
 
     /*large-devices*/
-    @media (min-width:769px) and (max-width: 1279px){
+    @media (min-width:851px) and (max-width: 1279px){
         .headText{
             margin-top: 18px;
             margin-left: 20px;
@@ -920,6 +936,15 @@
         .actionLinkContainer{
             flex-wrap: wrap;
         }
+        .cpRghtText{
+            text-align: center;
+            position: relative;
+            font-family: "PoppinReg";
+            font-size: 8px;
+            margin-bottom: 50px;
+            background-color: #ffffff;
+           
+        }
         .cpRghtText::before{
             content: "";
             height: 2px;
@@ -928,6 +953,7 @@
             position: absolute;
             left: 100px; 
             bottom: 0px;
+            top: 15px;
             
         }
         .cpRghtText::after{
@@ -938,6 +964,7 @@
             position: absolute;
             bottom: 0px;
             right: 100px;
+            top: 15px;
         }
     }
 
@@ -945,7 +972,7 @@
     @media (min-width:769px) and (max-width: 2560px){
         .header{
             
-            background: linear-gradient(60deg,#4839B7,#6ED0B5);;
+            background: linear-gradient(60deg,#4839B7,#6ED0B5);
         }
         .nav-bar{
             display: flex;
@@ -993,7 +1020,7 @@
             font-size: 80px;
             color: white;
             width: 625px;
-            background-image: url("../Xdimages/dottedGrid.png");
+            background-image: url("xdImages/dottedGrid.png");
             background-repeat: no-repeat;
             background-position: 39px 0px;
             background-size: 240px 240px;
@@ -1326,27 +1353,28 @@
             font-family: "Poppins";
             font-size: 14px;
             margin-bottom: 50px;
+            background-color: #ffffff;
         }
         .cpRghtText::before{
             content: "";
             height: 2px;
-            width: 300px;
+            width: 200px;
             background-color: #707070;
             position: absolute;
-            left: 100px; 
-            bottom: 0px;
-            
+            left: 0%; 
+            bottom: 0px;  
+            top: 15px;
         }
         .cpRghtText::after{
             content: "";
             height: 2px;
-            width: 300px;
+            width: 200px;
             background-color: #707070;
             position: absolute;
             bottom: 0px;
-            right: 100px;
-        }
+            right: 0%;
+            top: 15px;
     }
 
 
-
+    }
