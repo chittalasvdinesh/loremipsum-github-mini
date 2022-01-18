@@ -614,6 +614,7 @@
 
     .developmentSection{
         background-color: #6430B7;
+        text-align: center;
     }
     .containersec3{
         margin: auto;
@@ -639,6 +640,7 @@
         flex-wrap: wrap;
         position: relative;
         margin-top: 23px;
+        justify-content: center;
     }
     
     .actionBtnStl{
