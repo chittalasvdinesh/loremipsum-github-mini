@@ -8,17 +8,36 @@
 }
 
 
+
+
 .signup-btn{
     background: linear-gradient(to right,#AF43FF,#FA6E3B,#FA6E3B,#AF43FF);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 3s;
     cursor: pointer;
+}
+
+.signup-btn:hover{
+    background-position: right;
    
+
 }
 
 .login-btn{
     background: linear-gradient(to right,#B79039,#FF8545,#FF8545,#B79039);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 3s;
+    
     cursor: pointer;
+}
+
+.login-btn:hover{
+    background-position: right;
     
 }
+
 
 
 
@@ -36,6 +55,20 @@
 }
 
 
+@keyframes laptop {
+    0%{top: 0px;}
+    40%{top: 40px}
+    100%{top: 0px}
+}
+
+
+.laptop-container{
+    position: relative;
+    margin-bottom: 50px;
+    animation: laptop 2s linear infinite normal none running ;
+}
+
+
 /* Mobile First Approach*/
 @media (min-width:320px) and (max-width: 600px){
     .header{
@@ -47,14 +80,18 @@
         display: flex;
         justify-content: flex-end;
     }
-    .button-section::after{
-        content: "\e909";
-        font-family: "icomoon";
-        color: white;
-        font-size: 52px;
+
+    .menu-icon{
+        font-size: 50px;
         cursor: pointer;
-        transform: rotate(360deg);
+        transition: 1s;
     }
+
+    .menu-icon:hover{
+        transform: rotate(360deg);
+
+    }
+    
 
     .button-section{
         display: flex;
@@ -105,6 +142,20 @@
         margin-top: 80px;
         position: relative;
     }
+
+    @keyframes laptop {
+        0%{top: 0px;}
+        40%{top: 40px}
+        100%{top: 0px}
+    }
+
+  
+    .laptop-container{
+        position: relative;
+        margin-bottom: 50px;
+        animation: laptop 2s linear infinite normal none running ;
+    }
+
     .lineIcon{
         position: absolute;
         top: 0px;
@@ -192,6 +243,78 @@
         background-image: linear-gradient(to right,#B79039,#FF8545);
     } 
 
+
+    .card-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .printCard  .card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+     .card-front {
+          transform: rotateY(180deg);
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  .flip-card-front {
+    background-color: #FAFAFA;
+    color: black;
+  }
+  .printCard{
+    padding: 40px;
+    padding-top: 84px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0px 53px 73px #232d3c2f;;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+  }
+    .card-1{
+        margin-bottom: 20px;
+    }
+
+
     .developmentSection{
         background-color: #6430B7;
     }
@@ -246,29 +369,104 @@
         border: 1px solid #FFC04A;
         width: 200px;
         height: 55px;
+        overflow: hidden;
+    }
+
+    .abst1::before{
+        content: '';
+        position: absolute;
+        background-color: #FFC04A;
+        height: 55px;
+        width: 0;
+        position: absolute;
+        border-radius: 13px;
+        opacity: 0.6;
+        transition: 0.5s;
+        
+    }
+
+    .abst1:hover::before{
+        background-color: #FFC04A;
+        width: 200px;
+     
+       
+    }
+
+    .abst1:hover{
+        color: black;
     }
   
 
-    .abst2{
-        border: 1px solid #2AFAC2;
-        width: 284px;
-        height: 69px;
-        position: relative;
-    }
+    
     
     .abst2{
         border: 1px solid #2AFAC2;
         width: 260px;
         height: 55px;
         margin-top: 20px;
+        overflow: hidden;
     }
+
+
+    .abst2::before{
+        content: '';
+        position: absolute;
+        background-color: #2AFAC2;
+        height: 55px;
+        width: 0;
+        position: absolute;
+        border-radius: 13px;
+        opacity: 0.6;
+        transition: 0.5s;
+        
+    }
+
+    .abst2:hover::before{
+        background-color: #2AFAC2;
+        width: 260px;
+     
+       
+    }
+
+    .abst2:hover{
+        color: black;
+    }
+  
     
     .abst3{
         border: 1px solid #45E2FF;
-        width: 321px;
+        width: 300px;
         height: 69px;
         margin-top: 20px;
+        overflow: hidden;
     }
+
+  
+
+    .abst3::before{
+        content: '';
+        position: absolute;
+        background-color: #2AFAC2;
+        height: 69px;
+        width: 0;
+        position: absolute;
+        border-radius: 13px;
+        opacity: 0.6;
+        transition: 0.5s;
+        
+    }
+
+    .abst3:hover::before{
+        background-color: #2AFAC2;
+        width: 300px;
+     
+       
+    }
+
+    .abst3:hover{
+        color: black;
+    }
+
     .linkBtnTyp{
         margin-top: 26px;
         margin-bottom: 73px;
@@ -487,12 +685,15 @@
         display: flex;
         justify-content: flex-end;
     }
-    .button-section::after{
-        content: "\e909";
-        font-family: "icomoon";
-        color: white;
-        font-size: 68px;
+    .menu-icon{
+        font-size: 50px;
         cursor: pointer;
+        transition: 1s;
+    }
+
+    .menu-icon:hover{
+        transform: rotate(360deg);
+
     }
     .button-section{
         display: flex;
@@ -624,6 +825,77 @@
         background-image: linear-gradient(to right,#B79039,#FF8545);
     } 
 
+    
+    .card-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .printCard  .card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+     .card-front {
+          transform: rotateY(180deg);
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 390px;
+    height: 382px;
+    perspective: 1000px;
+  }
+  .flip-card-front {
+    background-color: #FAFAFA;
+    color: black;
+  }
+  .printCard{
+    padding: 40px;
+    padding-top: 84px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0px 53px 73px #232d3c2f;;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+  }
+    .card-1{
+        margin-bottom: 20px;
+    }
+
     .developmentSection{
         background-color: #6430B7;
         text-align: center;
@@ -680,20 +952,48 @@
         border: 1px solid #FFC04A;
         width: 235px;
         height: 69px;
+        overflow: hidden;
+        transition: 0.4s ease-in;
     }
+
+    
+
+    .abst1:hover{
+        background-color: #FFC04A;
+        color: black;
+    }
+  
     
     .abst2{
         border: 1px solid #2AFAC2;
         width: 284px;
         height: 69px;
+        overflow: hidden;
+        transition: 0.3s ease-in;
     }
+
+    .abst2:hover{
+        background-color: #2AFAC2;
+        color: black;
+    }
+
+    
+
     
     .abst3{
         border: 1px solid #45E2FF;
         width: 321px;
         height: 69px;
         margin-top: 20px;
+        overflow: hidden;
+        transition: 0.4s ease-in;
     }
+
+    .abst3:hover{
+        background-color: #45E2FF;
+        color: black;
+    }
+
 
     .linkBtnTyp{
         margin-top: 26px;
@@ -709,7 +1009,8 @@
         font-size: 18px;
         cursor: pointer;
     }
-
+    
+    
     .footer-content{
         margin:auto;
         width:90%;
@@ -899,6 +1200,8 @@
         right: 0%;
         top: 10px;
     }
+
+
     }
 
 
@@ -1006,7 +1309,7 @@
        }
 
        .menu-icon:hover{
-           transform: rotateY(360deg);
+           transform: rotate(360deg);
 
        }
 
@@ -1320,6 +1623,11 @@
             font-size: 11px;
             border-radius: 12px;
             color: #504450;
+            transition: 0.4s all;
+        }
+
+        .relativeLink:hover{
+
         }
 
         .rlstl1{
@@ -1425,15 +1733,14 @@
             margin: 10px;
             position: relative;
             border-radius: 50%;
+            transition: 0.4s all;
         }
 
-        .font-border{
-            border: 1px solid currentColor;
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-            position: relative;
+        .font-border:hover{
+            transform: rotate(360deg);
         }
+
+
 
         .font-icon{
             position: absolute;
@@ -1441,14 +1748,21 @@
             left: 50%;
             transform: translate(-50%,-50%);
             font-size: 20px;
+            translate: .1s;
         }
+
+        
 
         .border1{
             border: 1px solid #4267B2;
         }
+
+       
         .fc1{
             color: #4267B2;
+            
         }
+
 
         .border2{
             border: 1px solid #00acee;
@@ -1509,34 +1823,6 @@
         justify-content: space-between;
     }
 
-
-    }
-
-
-    .signup-btn{
-       
-        background-size: 300%;
-        background-position: left;
-        transition: background-position 3s;
-    }
-
-    .signup-btn:hover{
-        background-position: right;
-       
-
-    }
-
-    .login-btn{
-        background-size: 300%;
-        background-position: left;
-        transition: background-position 3s;
-    }
-    
-    .login-btn:hover{
-        background-position: right;
-        
-    }
-
   
     
     .cardBtnStl1:hover{
@@ -1547,11 +1833,19 @@
         background-image: linear-gradient(to left,#B79039,#FF8545);
     } 
 
-    .relativeLink:hover{
+    .active{
+        transition: 0.4s ease-in;
+    }
+
+    .active:hover{
         background-color: #FA3B6E;
         color: white;
         border: none;
-        transition: 0.5s;
+        
+    }
+
+    .anchor{
+        transition: 0.4s linear;
     }
 
     .anchor:hover{
@@ -1638,5 +1932,77 @@
     transform: rotateY(180deg);
   }
 
+
+
+    }
+
+
+    .linkBtnTyp:hover{
+        background-image: linear-gradient(to left, #39B2B7,#45E2FF);
+    }
  
+    .active{
+        transition: 0.4s ease-in;
+    }
+
+    .active:hover{
+        background-color: #FA3B6E;
+        color: white;
+        border: none;
+        
+    }
+
+    .anchor{
+        transition: 0.4s linear;
+    }
+
+    .anchor:hover{
+        color: #FA3B6E;
+
+    }
+
+    .font-border{
+        transition: 0.4s all;
+    }
+
+    .font-border:hover{
+        transform: rotate(360deg);
+    }
+
+    .joinButton{
+        width: 140px;
+        height: 40px;
+        color: #FA3B6E;
+        background-color: #ffffff;
+        border: 1px solid #FF4A4A;
+        border-radius: 30px;
+        font-family: "Poppins";
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    
+    .joinButton:hover{
+        color: white;
+        transition: 0.4s;
+    }
+    .joinButton span{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 0%;
+        background:#FF4A4A;
+        border-radius: 30px;
+        z-index: -1;
+        transition: 0.4s;        
+    }
+    .joinButton:hover span{
+        width: 140px;
+        transition: 0.4s;
+        border-radius: 30px;
+    }
 
